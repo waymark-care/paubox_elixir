@@ -28,3 +28,5 @@ paubox-*.tar
 .envrc.local
 
 .tool-versions
+
+mix.lock
