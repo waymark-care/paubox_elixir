@@ -1,6 +1,8 @@
-# Paubox
+# Paubox Elixir API Client
 
-**TODO: Add description**
+This is a simple Elixir client for the Paubox Email API. More about the API can
+be found at [Paubox](https://docs.paubox.com/docs/paubox_email_api/quickstart).
+
 
 ## Installation
 
@@ -18,4 +20,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/paubox>.
-
