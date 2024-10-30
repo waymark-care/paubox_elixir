@@ -1,8 +1,8 @@
 defmodule Paubox.MixProject do
   use Mix.Project
 
-  @source_url "https://github.com/waymark-care/paubox"
-  @version "0.1.0"
+  @source_url "https://github.com/waymark-care/paubox_elixir"
+  @version "1.0.0"
 
   def project do
     [
