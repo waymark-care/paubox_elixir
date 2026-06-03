@@ -18,6 +18,9 @@ defmodule Paubox.MixProject do
       docs: [
         main: "readme",
         extras: ["README.md", "CHANGELOG.md", "LICENSE.txt"]
+      ],
+      test_coverage: [
+        tool: ExCoveralls
       ]
     ]
   end
@@ -29,13 +32,19 @@ defmodule Paubox.MixProject do
     ]
   end
 
+  def cli do
+    [preferred_envs: [coveralls: :test, "coveralls.detail": :test, "coveralls.html": :test]]
+  end
+
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, "~> 0.34.2", only: :dev, runtime: false},
-      {:mock, "~> 0.3.8", only: :test},
+      {:ex_doc, "~> 0.40", only: :dev, runtime: false},
+      {:meck, "~> 1.2", only: :test, runtime: false, override: true},
+      {:mock, "~> 0.3", only: :test},
       {:plug, "~> 1.16", only: :test},
-      {:typed_struct, ">= 0.3.0"},
+      {:excoveralls, "~> 0.18.3", only: :test},
+      {:typedstruct, ">= 0.5.2"},
       {:jason, ">= 1.0.0"},
       {:req, ">= 0.4.0"},
       {:mail, ">= 0.3.0"}

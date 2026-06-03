@@ -84,7 +84,7 @@ defmodule Paubox.API.EmailTest do
     end
 
     test "stub a basic error response" do
-      Req.Test.stub(:email_send_api_error, fn conn ->
+      Req.Test.stub(:email_send_api_error, fn %Plug.Conn{} = conn ->
         Req.Test.json(%Plug.Conn{conn | status: 400}, %{
           errors: [
             %{
